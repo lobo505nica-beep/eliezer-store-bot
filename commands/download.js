@@ -1,52 +1,89 @@
-module.exports = [
-    { name: 'play', aliases: ['cancion', 'musica'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎵 Descargando audio...' }); } },
-    { name: 'video', aliases: ['mp4', 'ytmp4'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎥 Descargando video...' }); } },
-    { name: 'spotify', aliases: ['spdl'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎧 Descargando Spotify...' }); } },
-    { name: 'facebook', aliases: ['fb'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📘 Descargando Facebook...' }); } },
-    { name: 'instagram', aliases: ['ig', 'insta'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📸 Descargando Instagram...' }); } },
-    { name: 'tiktok', aliases: ['tt'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎵 Descargando TikTok...' }); } },
-    { name: 'mediafire', aliases: ['mfire'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📦 Descargando MediaFire...' }); } },
-    { name: 'imagen', aliases: ['img', 'pinterest'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🖼️ Buscando imagen...' }); } },
-    { name: 'apk', aliases: ['app'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📱 Descargando APK...' }); } },
-    { name: 'twitter', aliases: ['xdl', 'tw'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🐦 Descargando Twitter...' }); } },
-    { name: 'mega', aliases: ['megadl'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '☁️ Descargando Mega...' }); } },
-    { name: 'soundcloud', aliases: ['scdl'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎶 Descargando SoundCloud...' }); } },
-    { name: 'gdrive', aliases: ['drive'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📁 Descargando Google Drive...' }); } },
-    { name: 'gitclone', aliases: ['github'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🐙 Clonando repositorio...' }); } },
-    { name: 'tiktokslide', aliases: ['ttslide'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🖼️ Descargando carrusel TikTok...' }); } },
-    { name: 'pinvideo', aliases: ['pinvid'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📌 Descargando Pinterest video...' }); } },
-    { name: 'animedl', aliases: ['animeep'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🍥 Descargando anime...' }); } },
-    { name: 'media', aliases: ['dlall'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📥 Descargador universal...' }); } },
-    { name: 'ringtones', aliases: ['tono'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔔 Buscando tono...' }); } },
-    { name: 'wallpaper', aliases: ['fondo'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🖼️ Buscando wallpaper...' }); } },
-    { name: 'ttsdown', aliases: ['voicedl'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🗣️ Descargando nota de voz...' }); } },
-    { name: 'lyrics', aliases: ['letra'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📜 Buscando letra...' }); } },
-    { name: 'animewall', aliases: ['wallanime'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🌸 Wallpaper anime...' }); } },
-    { name: 'playdoc', aliases: ['audiodoc'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📄 Audio como documento...' }); } },
-    { name: 'videodoc', aliases: ['mp4doc'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📁 Video como documento...' }); } },
-    { name: 'play2', aliases: ['audio2'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎵 Servidor alternativo audio...' }); } },
-    { name: 'video2', aliases: ['mp4_2'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎥 Servidor alternativo video...' }); } },
-    { name: 'twitch', aliases: ['twitchdl'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🟣 Descargando Twitch...' }); } },
-    { name: 'threads', aliases: ['threadsdl'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🧵 Descargando Threads...' }); } },
-    { name: 'pinterestdl', aliases: ['pindl'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📌 Descargando Pinterest...' }); } },
-    { name: 'mediafiresearch', aliases: ['mfiresearch'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📦 Buscando en MediaFire...' }); } },
-    { name: 'apksearch', aliases: ['searchapk'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📱 Buscando APKs...' }); } },
-    { name: 'yts', aliases: ['ytsearch'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔍 Buscando en YouTube...' }); } },
-    { name: 'playdoc2', aliases: ['docaudio'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📄 Descargando doc audio...' }); } },
-    { name: 'mp3doc', aliases: ['docmp3'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎵 MP3 en documento...' }); } },
-    { name: 'zippyshare', aliases: ['zipdl'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📦 Descargando archivo ZIP...' }); } },
-    { name: 'terabox', aliases: ['tbxdl'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📦 Descargando TeraBox...' }); } },
-    { name: 'pixiv', aliases: ['pixivdl'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎨 Descargando Pixiv...' }); } },
-    { name: 'snackvideo', aliases: ['snack'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🍪 Descargando SnackVideo...' }); } },
-    { name: 'facebookdoc', aliases: ['fbdoc'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📘 FB video documento...' }); } },
-    { name: 'igdoc', aliases: ['instagramdoc'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📸 IG video documento...' }); } },
-    { name: 'ttdoc', aliases: ['tiktokdoc'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎵 TikTok documento...' }); } },
-    { name: 'pelis', aliases: ['pelisplus'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎬 Buscando película...' }); } },
-    { name: 'serie', aliases: ['seriesdl'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📺 Buscando serie...' }); } },
-    { name: 'animepelicula', aliases: ['animefilm'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🍥 Película anime...' }); } },
-    { name: 'mangadl', aliases: ['manga'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📖 Descargando manga...' }); } },
-    { name: 'hentaidl', aliases: ['hnl'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔞 Descarga multimedia...' }); } },
-    { name: 'wallpaperhd', aliases: ['hdwall'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🖼️ Wallpaper HD...' }); } },
-    { name: 'gifer', aliases: ['descargargif'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎞️ Descargando GIF...' }); } },
-    { name: 'allmedia', aliases: ['universal'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📥 Descarga múltiple...' }); } }
-];
+const yts = require('yt-search')
+const { exec } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+
+module.exports = {
+name: 'download',
+execute: async (sock, msg, args, BOT_NAME) => {
+const from = msg.key.remoteJid
+const cmd = args[0]
+const query = args.slice(1).join(' ')
+
+if(!fs.existsSync('./tmp')) fs.mkdirSync('./tmp')
+
+if(cmd === 'play' || cmd === 'yta') {
+if(!query) return sock.sendMessage(from, {text: `Uso:.play nombre de cancion\n*${BOT_NAME}*`})
+await sock.sendMessage(from, {text: `*${BOT_NAME}* 🔍 Buscando: ${query}...`})
+try {
+const r = await yts(query)
+const url = r.videos[0].url
+const title = r.videos[0].title
+const file = `./tmp/${Date.now()}.mp3`
+exec(`yt-dlp -x --audio-format mp3 --audio-quality 0 -o "${file}" "${url}"`, async (err) => {
+if(err) return sock.sendMessage(from, {text: `*${BOT_NAME}* Error al descargar`})
+await sock.sendMessage(from, {
+audio: fs.readFileSync(file),
+mimetype: 'audio/mpeg',
+fileName: title + '.mp3',
+contextInfo: { externalAdReply: { title: title, body: BOT_NAME } }
+})
+fs.unlinkSync(file)
+})
+} catch(e){ sock.sendMessage(from, {text: `*${BOT_NAME}* Error: ${e}`}) }
+}
+
+else if(cmd === 'ytv') {
+if(!query) return sock.sendMessage(from, {text: `Uso:.ytv link o nombre`})
+await sock.sendMessage(from, {text: `*${BOT_NAME}* 📹 Descargando video...`})
+try {
+const r = await yts(query)
+const url = r.videos[0].url
+const title = r.videos[0].title
+const file = `./tmp/${Date.now()}.mp4`
+exec(`yt-dlp -f "best[height<=480]" -o "${file}" "${url}"`, async (err) => {
+if(err) return sock.sendMessage(from, {text: `*${BOT_NAME}* Error`})
+await sock.sendMessage(from, {video: fs.readFileSync(file), caption: title})
+fs.unlinkSync(file)
+})
+} catch(e){ sock.sendMessage(from, {text: `*${BOT_NAME}* Error: ${e}`}) }
+}
+
+else if(cmd === 'tiktok' || cmd === 'tt') {
+if(!query) return sock.sendMessage(from, {text: `Uso:.tiktok link`})
+await sock.sendMessage(from, {text: `*${BOT_NAME}* 📱 Descargando tiktok...`})
+const file = `./tmp/${Date.now()}.mp4`
+exec(`yt-dlp -o "${file}" "${query}"`, async (err) => {
+if(err) return sock.sendMessage(from, {text: `*${BOT_NAME}* Error`})
+await sock.sendMessage(from, {video: fs.readFileSync(file), caption: `*${BOT_NAME}*`})
+fs.unlinkSync(file)
+})
+}
+
+else if(cmd === 'ig') {
+if(!query) return sock.sendMessage(from, {text: `Uso:.ig link de instagram`})
+await sock.sendMessage(from, {text: `*${BOT_NAME}* 📸 Descargando...`})
+const file = `./tmp/${Date.now()}.mp4`
+exec(`yt-dlp -o "${file}" "${query}"`, async (err) => {
+if(err) return sock.sendMessage(from, {text: `*${BOT_NAME}* Error`})
+await sock.sendMessage(from, {video: fs.readFileSync(file)})
+fs.unlinkSync(file)
+})
+}
+
+else if(cmd === 'fb') {
+if(!query) return sock.sendMessage(from, {text: `Uso:.fb link`})
+await sock.sendMessage(from, {text: `*${BOT_NAME}* 📘 Descargando...`})
+const file = `./tmp/${Date.now()}.mp4`
+exec(`yt-dlp -o "${file}" "${query}"`, async (err) => {
+if(err) return sock.sendMessage(from, {text: `*${BOT_NAME}* Error`})
+await sock.sendMessage(from, {video: fs.readFileSync(file)})
+fs.unlinkSync(file)
+})
+}
+
+else {
+let lista = ['play','yta','ytv','tiktok','tt','ig','fb']
+await sock.sendMessage(from, {text: `*${BOT_NAME} - DOWNLOAD*\n\n.${lista.join('\n.')}\n\nEjemplo:.play peso pluma`})
+}
+}}
