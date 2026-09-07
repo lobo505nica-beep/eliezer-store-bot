@@ -1,4 +1,3 @@
-// Archivo: package.json - Actualizado con las dependencias necesarias para los 400+ comandos, sesiones y Baileys
 {
   "name": "eliezer-store-bot",
   "version": "2.0.0",
