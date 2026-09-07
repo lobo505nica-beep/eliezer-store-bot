@@ -1,23 +1,15 @@
 {
-  "name": "eliezer-store-bot",
-  "version": "2.0.0",
-  "description": "Bot de WhatsApp con 400+ comandos organizados en 12 secciones y vinculación por código y QR",
+  "name": "eliezerstorebot",
+  "version": "3.0.0",
+  "description": "Bot de EliezerStore con 600 comandos",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
+  "scripts": { "start": "node index.js" },
   "dependencies": {
-    "@whiskeysockets/baileys": "^6.7.13",
+    "@whiskeysockets/baileys": "^6.7.8",
     "pino": "^9.0.0",
-    "qrcode-terminal": "^0.12.0",
     "axios": "^1.7.2",
-    "fluent-ffmpeg": "^2.1.2"
-  },
-  "keywords": [
-    "whatsapp-bot",
-    "baileys",
-    "eliezer-store"
-  ],
-  "author": "Eliezer",
-  "license": "MIT"
+    "yt-search": "^2.11.1",
+    "ffmpeg-static": "^5.2.0",
+    "fluent-ffmpeg": "^2.1.3"
+  }
 }
