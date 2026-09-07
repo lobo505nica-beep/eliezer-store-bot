@@ -12,19 +12,13 @@ fs.readdirSync('./commands').filter(f => f.endsWith('.js')).forEach(f => {
 
 async function startBot() {
     const { state, saveCreds } = await useMultiFileAuthState('./auth')
-    const sock = makeWASocket({
-        auth: state,
-        logger: pino({level: 'silent'}),
-        browser: ['eliezerstorebot', 'Chrome', '1.0.0']
-    })
-
+    const sock = makeWASocket({ auth: state, logger: pino({level: 'silent'}), browser: [BOT_NAME, 'Chrome', '1.0.0'] })
     sock.ev.on('connection.update', (u) => {
-        if(u.pairingCode) console.log(`\n=== eliezerstorebot ===\nCODIGO: ${u.pairingCode}\n`)
+        if(u.pairingCode) console.log(`\n=== ${BOT_NAME} ===\nCODIGO: ${u.pairingCode}\n`)
         if(u.connection === 'open') console.log(`${BOT_NAME} conectado ✅`)
         if(u.connection === 'close') startBot()
     })
     sock.ev.on('creds.update', saveCreds)
-
     sock.ev.on('messages.upsert', async (m) => {
         const msg = m.messages[0]
         if(!msg.message || msg.key.fromMe) return
