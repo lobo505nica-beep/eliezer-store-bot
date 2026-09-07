@@ -1,52 +1,117 @@
-module.exports = [
-    { name: 'anime', aliases: ['animeinfo'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🍥 Buscando información de anime...' }); } },
-    { name: 'manga', aliases: ['mangainfo'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📖 Buscando manga...' }); } },
-    { name: 'character', aliases: ['personaje'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '👤 Buscando personaje de anime...' }); } },
-    { name: 'waifu', aliases: ['w'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🌸 Waifu aleatoria.' }); } },
-    { name: 'husbando', aliases: ['huz'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '✨ Husbando aleatorio.' }); } },
-    { name: 'neko', aliases: ['nekopic'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🐱 Neko girl aleatoria.' }); } },
-    { name: 'loli', aliases: ['lolopic'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '✨ Imagen loli.' }); } },
-    { name: 'cosplay', aliases: ['cosp'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📸 Cosplay de anime.' }); } },
-    { name: 'otaku', aliases: ['otakupic'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🍙 Imagen otaku.' }); } },
-    { name: 'foxgirl', aliases: ['fox'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🦊 Foxgirl generada.' }); } },
-    { name: 'wolfgirl', aliases: ['wolf'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🐺 Wolfgirl generada.' }); } },
-    { name: 'animewallpaper', aliases: ['wallanime'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🖼️ Wallpaper de anime.' }); } },
-    { name: 'hug', aliases: ['abrazar'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🤗 GIF de abrazo anime.' }); } },
-    { name: 'kiss', aliases: ['besar'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💋 GIF de beso anime.' }); } },
-    { name: 'pat', aliases: ['caricia'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🖐️ GIF de caricia anime.' }); } },
-    { name: 'slap', aliases: ['bofetada'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '👋 GIF de bofetada anime.' }); } },
-    { name: 'poke', aliases: ['picar'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '👉 GIF de toque anime.' }); } },
-    { name: 'cry', aliases: ['llorar'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '😢 GIF llorando anime.' }); } },
-    { name: 'kill', aliases: ['matar'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '⚔️ GIF kill anime.' }); } },
-    { name: 'wink', aliases: ['guiño'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '😉 GIF guiño anime.' }); } },
-    { name: 'pokeanime', aliases: ['panime'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '✨ Poke anime.' }); } },
-    { name: 'animenews', aliases: ['noticiasanime'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📰 Últimas noticias de anime.' }); } },
-    { name: 'animelookup', aliases: ['sauce', 'whatanime'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔍 Buscando de qué anime es...' }); } },
-    { name: 'boruto', aliases: ['naruto'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🍥 Contenido de Naruto.' }); } },
-    { name: 'dragonball', aliases: ['dbz'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🐉 Contenido de Dragon Ball.' }); } },
-    { name: 'onepiece', aliases: ['op'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🏴‍☠️ Contenido de One Piece.' }); } },
-    { name: 'demonslayer', aliases: ['kimetsu'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🗡️ Contenido de Demon Slayer.' }); } },
-    { name: 'jujutsu', aliases: ['jjk'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '⚡ Contenido de Jujutsu Kaisen.' }); } },
-    { name: 'genshin', aliases: ['gi'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '✨ Contenido de Genshin Impact.' }); } },
-    { name: 'honkai', aliases: ['hsr'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '✨ Contenido de Honkai Star Rail.' }); } },
-    { name: 'animequiz', aliases: ['aquiz'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '❓ Quiz de anime.' }); } },
-    { name: 'animetrivia', aliases: ['atrivia'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🧠 Trivia otaku.' }); } },
-    { name: 'animeschedule', aliases: ['calendario'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📅 Horarios de emisión de animes.' }); } },
-    { name: 'animestudio', aliases: ['estudio'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🏢 Información de estudios de animación.' }); } },
-    { name: 'animeost', aliases: ['aost'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎵 Buscando OST de anime.' }); } },
-    { name: 'animedub', aliases: ['latino'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🗣️ Animes en español latino.' }); } },
-    { name: 'animetop', aliases: ['topanime'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🏆 Top animes mejor valorados.' }); } },
-    { name: 'animeseason', aliases: ['temporada'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🌸 Animes de la temporada actual.' }); } },
-    { name: 'animerecommend', aliases: ['recomendar'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💡 Recomendación de anime.' }); } },
-    { name: 'animelist', aliases: ['myanimelist'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📋 Consultando MyAnimeList.' }); } },
-    { name: 'animesticker', aliases: ['asticker'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🖼️ Sticker anime creado.' }); } },
-    { name: 'animegif', aliases: ['agif'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎞️ GIF anime generado.' }); } },
-    { name: 'animeavatar', aliases: ['aavatar'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🖼️ Avatar anime.' }); } },
-    { name: 'animequote', aliases: ['fraseanime'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💬 Frase célebre de anime.' }); } },
-    { name: 'animestats', aliases: ['astats'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📊 Estadísticas del módulo anime.' }); } },
-    { name: 'animehelp', aliases: ['ahelp'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📖 Ayuda de comandos anime.' }); } },
-    { name: 'animeclear', aliases: ['aclear'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🧹 Caché de anime limpia.' }); } },
-    { name: 'animelock', aliases: ['alock'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔒 Módulo anime bloqueado en grupo.' }); } },
-    { name: 'animeunloc', aliases: ['aunlock'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔓 Módulo anime desbloqueado.' }); } },
-    { name: 'animestatus', aliases: ['astatus'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🟢 Módulo anime activo.' }); } }
-];
+module.exports = {
+name: 'anime',
+execute: async (sock, msg, args, BOT_NAME) => {
+const from = msg.key.remoteJid
+const cmd = args[0]
+const query = args.slice(1).join(' ')
+
+// WAIFU RANDOM
+if(cmd==='waifu'){
+const url = 'https://api.waifu.pics/sfw/waifu'
+const res = await fetch(url)
+const data = await res.json()
+await sock.sendMessage(from, {image: {url: data.url}, caption: `*${BOT_NAME} WAIFU*`})
+}
+
+// NEKO
+else if(cmd==='neko'){
+const url = 'https://api.waifu.pics/sfw/neko'
+const res = await fetch(url)
+const data = await res.json()
+await sock.sendMessage(from, {image: {url: data.url}, caption: `*${BOT_NAME} NEKO*`})
+}
+
+// MEGUMIN
+else if(cmd==='megumin'){
+const url = 'https://api.waifu.pics/sfw/megumin'
+const res = await fetch(url)
+const data = await res.json()
+await sock.sendMessage(from, {image: {url: data.url}, caption: `*${BOT_NAME} MEGUMIN*`})
+}
+
+// SHINOBU
+else if(cmd==='shinobu'){
+const url = 'https://api.waifu.pics/sfw/shinobu'
+const res = await fetch(url)
+const data = await res.json()
+await sock.sendMessage(from, {image: {url: data.url}, caption: `*${BOT_NAME} SHINOBU*`})
+}
+
+// WALLPAPER ANIME
+else if(cmd==='wallpaper'){
+const url = 'https://api.waifu.pics/sfw/wallpaper'
+const res = await fetch(url)
+const data = await res.json()
+await sock.sendMessage(from, {image: {url: data.url}, caption: `*${BOT_NAME} WALLPAPER*`})
+}
+
+// BUSCAR ANIME
+else if(cmd==='search-anime' || cmd==='anime'){
+if(!query) return sock.sendMessage(from,{text:`Uso:.anime naruto`})
+const url = `https://api.jikan.moe/v4/anime?q=${encodeURIComponent(query)}&limit=1`
+const res = await fetch(url)
+const data = await res.json()
+const anime = data.data[0]
+await sock.sendMessage(from, {
+image: {url: anime.images.jpg.image_url},
+caption: `*${BOT_NAME} INFO ANIME*\n\n*Titulo:* ${anime.title}\n*Episodios:* ${anime.episodes}\n*Score:* ${anime.score}\n*Estado:* ${anime.status}\n*Genero:* ${anime.genres.map(g=>g.name).join(', ')}`
+})
+}
+
+// PERSONAJE
+else if(cmd==='character' || cmd==='character-anime'){
+if(!query) return sock.sendMessage(from,{text:`Uso:.character itachi`})
+const url = `https://api.jikan.moe/v4/characters?q=${encodeURIComponent(query)}&limit=1`
+const res = await fetch(url)
+const data = await res.json()
+const char = data.data[0]
+await sock.sendMessage(from, {
+image: {url: char.images.jpg.image_url},
+caption: `*${BOT_NAME} PERSONAJE*\n\n*Nombre:* ${char.name}\n*Favoritos:* ${char.favorites}\n*Sobre:* ${char.about?.substring(0,300)}...`
+})
+}
+
+// MANGA
+else if(cmd==='manga'){
+if(!query) return sock.sendMessage(from,{text:`Uso:.manga one piece`})
+const url = `https://api.jikan.moe/v4/manga?q=${encodeURIComponent(query)}&limit=1`
+const res = await fetch(url)
+const data = await res.json()
+const manga = data.data[0]
+await sock.sendMessage(from, {
+image: {url: manga.images.jpg.image_url},
+caption: `*${BOT_NAME} MANGA*\n\n*Titulo:* ${manga.title}\n*Capitulos:* ${manga.chapters}\n*Score:* ${manga.score}\n*Estado:* ${manga.status}`
+})
+}
+
+// QUOTE ANIME
+else if(cmd==='quote-anime'){
+const url = 'https://animechan.xyz/api/random'
+const res = await fetch(url)
+const data = await res.json()
+await sock.sendMessage(from,{text:`*${BOT_NAME} QUOTE*\n\n"${data.quote}"\n- ${data.character} de ${data.anime}`})
+}
+
+// GIF ANIME
+else if(cmd==='gif-anime'){
+const url = 'https://api.waifu.pics/sfw/hug'
+const res = await fetch(url)
+const data = await res.json()
+await sock.sendMessage(from, {video: {url: data.url}, caption: `*${BOT_NAME} GIF*`})
+}
+
+// TOP ANIME
+else if(cmd==='top-anime'){
+const url = 'https://api.jikan.moe/v4/top/anime'
+const res = await fetch(url)
+const data = await res.json()
+let txt = `*${BOT_NAME} TOP 5 ANIMES*\n\n`
+data.data.slice(0,5).forEach((a,i)=> txt += `${i+1}. ${a.title} - ${a.score} ⭐\n`)
+await sock.sendMessage(from,{text:txt})
+}
+
+else{
+let lista=['waifu','neko','megumin','shinobu','wallpaper','anime','manga','character','quote-anime','gif-anime','top-anime']
+await sock.sendMessage(from,{text:`*${BOT_NAME} - ANIME*\n\n.${lista.join('\n.')}\n\nEjemplo:.anime naruto.character luffy`})
+}
+}}
