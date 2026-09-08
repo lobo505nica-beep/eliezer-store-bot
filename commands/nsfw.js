@@ -1,52 +1,102 @@
-module.exports = [
-    { name: 'nsfw', aliases: ['mas18'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔞 Contenido +18 activado.' }); } },
-    { name: 'waifunsfw', aliases: ['nsfwneko'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🌸 Imagen NSFW aleatoria.' }); } },
-    { name: 'hentai', aliases: ['h'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔞 Imagen hentai generada.' }); } },
-    { name: 'rule34', aliases: ['r34'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔍 Buscando en Rule34...' }); } },
-    { name: 'trapnsfw', aliases: ['ntrap'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '✨ Contenido NSFW trap.' }); } },
-    { name: 'blowjob', aliases: ['bj'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔞 Multimedia NSFW.' }); } },
-    { name: 'cum', aliases: ['cumshot'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔞 Contenido explícito.' }); } },
-    { name: 'pussy', aliases: ['vagina'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔞 Multimedia enviada.' }); } },
-    { name: 'ass', aliases: ['culo'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔞 Contenido NSFW ass.' }); } },
-    { name: 'boobs', aliases: ['tetas'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔞 Contenido NSFW boobs.' }); } },
-    { name: 'lesbian', aliases: ['lesbis'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔞 Multimedia lésbica.' }); } },
-    { name: 'milf', aliases: ['moms'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔞 Contenido MILF.' }); } },
-    { name: 'hentaigif', aliases: ['hgif'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎞️ GIF hentai animado.' }); } },
-    { name: 'porngif', aliases: ['pgif'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎞️ GIF porno.' }); } },
-    { name: 'yuri', aliases: ['yurinsfw'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🌸 Contenido Yuri +18.' }); } },
-    { name: 'yaoi', aliases: ['yaoinsfw'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🌸 Contenido Yaoi +18.' }); } },
-    { name: 'anal', aliases: ['analnsfw'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔞 Contenido anal.' }); } },
-    { name: 'thighs', aliases: ['muslosnsfw'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔞 Muslos explícitos.' }); } },
-    { name: 'cosplaynsfw', aliases: ['ncosplay'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📸 Cosplay +18.' }); } },
-    { name: 'orgy', aliases: ['orgia'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔞 Multimedia +18.' }); } },
-    { name: 'gangbang', aliases: ['gb'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔞 Contenido explícito.' }); } },
-    { name: 'bdsm', aliases: ['bondage'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '⛓️ Contenido BDSM.' }); } },
-    { name: 'footfetish', aliases: ['feet'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '👣 Contenido fetichista.' }); } },
-    { name: 'sucking', aliases: ['chUPAR'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔞 Multimedia NSFW.' }); } },
-    { name: 'futanari', aliases: ['futa'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '✨ Contenido futanari.' }); } },
-    { name: 'neko-nsfw', aliases: ['nneko'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🐱 Neko explícito.' }); } },
-    { name: 'foxgirl-nsfw', aliases: ['nfox'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🦊 Foxgirl explícita.' }); } },
-    { name: 'groknsfw', aliases: ['aisex'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🤖 IA generativa +18.' }); } },
-    { name: 'nsfwsearch', aliases: ['hsearch'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔍 Buscando hentai...' }); } },
-    { name: 'nsfwallpaper', aliases: ['hwall'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🖼️ Wallpaper +18.' }); } },
-    { name: 'hentailist', aliases: ['hlist'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📋 Lista de mangas hentai.' }); } },
-    { name: 'doujinshi', aliases: ['doujin'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📖 Leyendo doujinshi...' }); } },
-    { name: 'autonsfw', aliases: ['ansfw'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '⚙️ NSFW automático en grupo.' }); } },
-    { name: 'antispy', aliases: ['aspy'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🛡️ Protección antiespía +18.' }); } },
-    { name: 'nsfwprofile', aliases: ['nprofile'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '👤 Perfil NSFW.' }); } },
-    { name: 'nsfwtop', aliases: ['ntop'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🏆 Top usuarios NSFW.' }); } },
-    { name: 'nsfwshop', aliases: ['nshop'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🏪 Tienda NSFW.' }); } },
-    { name: 'nsfwgame', aliases: ['ngame'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎮 Juego interactivo +18.' }); } },
-    { name: 'nsfwquiz', aliases: ['nquiz'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '❓ Quiz +18.' }); } },
-    { name: 'nsfwvideo', aliases: ['nvideodl'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎬 Video +18 descargado.' }); } },
-    { name: 'nsfwaudio', aliases: ['naudio'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎵 Audio ASMR +18.' }); } },
-    { name: 'nsfwsticker', aliases: ['ns'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🖼️ Sticker NSFW creado.' }); } },
-    { name: 'nsfwgifmaker', aliases: ['ngifmaker'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎞️ GIF NSFW creado.' }); } },
-    { name: 'nsfwfilter', aliases: ['nfilter'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎨 Filtro NSFW.' }); } },
-    { name: 'nsfwai', aliases: ['nai'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🤖 Arte IA +18.' }); } },
-    { name: 'nsfwrandom', aliases: ['nrand'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎲 Contenido NSFW aleatorio.' }); } },
-    { name: 'nsfwclean', aliases: ['nclean'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🧹 Caché NSFW limpia.' }); } },
-    { name: 'nsfwstatus', aliases: ['nstatus'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📊 Estado del módulo +18.' }); } },
-    { name: 'nsfwhelp', aliases: ['nhelp'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📖 Ayuda de comandos +18.' }); } },
-    { name: 'nsfwlock', aliases: ['nlock'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔒 Módulo +18 bloqueado en grupo.' }); } }
-];
+module.exports = {
+name: '+18',
+execute: async (sock, msg, args, BOT_NAME) => {
+const from = msg.key.remoteJid
+const cmd = args[0]
+const isGroup = from.endsWith('@g.us')
+
+// VERIFICAR SI EL GRUPO TIENE +18 ACTIVADO
+if(isGroup &&!global.mas18) global.mas18 = {}
+if(isGroup &&!global.mas18[from] && cmd!== 'mas18-on' && cmd!== 'mas18-off'){
+return sock.sendMessage(from,{text:`*${BOT_NAME}* 🔞 Este grupo no tiene el +18 activado\nActivalo con:.mas18-on`})
+}
+
+// ACTIVAR/DESACTIVAR +18
+if(cmd==='mas18-on'){
+if(!isGroup) return sock.sendMessage(from,{text:`Solo en grupos`})
+global.mas18[from] = true
+await sock.sendMessage(from,{text:`*${BOT_NAME}* 🔞 Modo +18 ACTIVADO en este grupo`})
+}
+else if(cmd==='mas18-off'){
+if(!isGroup) return sock.sendMessage(from,{text:`Solo en grupos`})
+global.mas18[from] = false
+await sock.sendMessage(from,{text:`*${BOT_NAME}* ✅ Modo +18 DESACTIVADO`})
+}
+
+// WAIFU NSFW
+else if(cmd==='waifu-nsfw'){
+const url = 'https://api.waifu.pics/nsfw/waifu'
+const res = await fetch(url)
+const data = await res.json()
+await sock.sendMessage(from, {image: {url: data.url}, caption: `*${BOT_NAME} WAIFU NSFW*`})
+}
+
+// NEKO NSFW
+else if(cmd==='neko-nsfw'){
+const url = 'https://api.waifu.pics/nsfw/neko'
+const res = await fetch(url)
+const data = await res.json()
+await sock.sendMessage(from, {image: {url: data.url}, caption: `*${BOT_NAME} NEKO NSFW*`})
+}
+
+// TRAP NSFW
+else if(cmd==='trap-nsfw'){
+const url = 'https://api.waifu.pics/nsfw/trap'
+const res = await fetch(url)
+const data = await res.json()
+await sock.sendMessage(from, {image: {url: data.url}, caption: `*${BOT_NAME} TRAP*`})
+}
+
+// BLowJOB
+else if(cmd==='bj'){
+const url = 'https://api.waifu.pics/nsfw/blowjob'
+const res = await fetch(url)
+const data = await res.json()
+await sock.sendMessage(from, {video: {url: data.url}, caption: `*${BOT_NAME}*`})
+}
+
+// HENTAI
+else if(cmd==='hentai'){
+const url = 'https://api.waifu.pics/nsfw/hentai'
+const res = await fetch(url)
+const data = await res.json()
+await sock.sendMessage(from, {image: {url: data.url}, caption: `*${BOT_NAME} HENTAI*`})
+}
+
+// ASS
+else if(cmd==='ass'){
+const url = 'https://api.waifu.pics/nsfw/ass'
+const res = await fetch(url)
+const data = await res.json()
+await sock.sendMessage(from, {image: {url: data.url}, caption: `*${BOT_NAME} ASS*`})
+}
+
+// ECCHI
+else if(cmd==='ecchi'){
+const url = 'https://api.waifu.pics/nsfw/ecchi'
+const res = await fetch(url)
+const data = await res.json()
+await sock.sendMessage(from, {image: {url: data.url}, caption: `*${BOT_NAME} ECCHI*`})
+}
+
+// PACK
+else if(cmd==='pack'){
+const url = 'https://api.waifu.pics/nsfw/waifu'
+const res = await fetch(url)
+const data = await res.json()
+await sock.sendMessage(from, {image: {url: data.url}, caption: `*${BOT_NAME} PACK*\nEnviando pack...`})
+}
+
+// ANAL
+else if(cmd==='anal'){
+const url = 'https://api.waifu.pics/nsfw/anal'
+const res = await fetch(url)
+const data = await res.json()
+await sock.sendMessage(from, {image: {url: data.url}, caption: `*${BOT_NAME} ANAL*`})
+}
+
+else{
+let lista=['mas18-on','mas18-off','waifu-nsfw','neko-nsfw','trap-nsfw','bj','hentai','ass','ecchi','pack','anal']
+await sock.sendMessage(from,{text:`*${BOT_NAME} - +18*\n\n.${lista.join('\n.')}\n\n*IMPORTANTE:* Activa primero con.mas18-on`})
+}
+}}
