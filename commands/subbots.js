@@ -1,53 +1,73 @@
-module.exports = [
-    { name: 'serbot', aliases: ['jadibot', 'codebot'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🤖 Iniciando sub bot...' }); } },
-    { name: 'stopbot', aliases: ['detenerbot'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🛑 Sub bot detenido.' }); } },
-    { name: 'bots', aliases: ['listbots'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📋 Lista de sub bots activos.' }); } },
-    { name: 'deletebot', aliases: ['borrarbot'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🗑️ Sesión de sub bot eliminada.' }); } },
-    { name: 'restartbot', aliases: ['reiniciarbot'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔄 Sub bot reiniciado.' }); } },
-    { name: 'statusbot', aliases: ['estadobot'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📊 Estado del sub bot verificado.' }); } },
-    { name: 'infobot', aliases: ['botdetail'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: 'ℹ️ Información detallada del sub bot.' }); } },
-    { name: 'pingbot', aliases: ['sbping'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🏓 Ping de sub bot.' }); } },
-    { name: 'ownerbot', aliases: ['sowner'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '👑 Dueño del sub bot.' }); } },
-    { name: 'limitbot', aliases: ['slimit'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '⚡ Límite de sub bot configurado.' }); } },
-    { name: 'tokenbot', aliases: ['stoken'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔑 Token de sub bot verificado.' }); } },
-    { name: 'qrbot', aliases: ['sqr'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📱 QR de sub bot generado.' }); } },
-    { name: 'codebot', aliases: ['scode'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔗 Código de sub bot generado.' }); } },
-    { name: 'connectbot', aliases: ['sconnect'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔌 Sub bot conectado.' }); } },
-    { name: 'disconnectbot', aliases: ['sdisconnect'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔌 Sub bot desconectado.' }); } },
-    { name: 'autostart', aliases: ['sauto'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '⚡ Autoinicio configurado.' }); } },
-    { name: 'sloganbot', aliases: ['sslogan'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💬 Slogan de sub bot.' }); } },
-    { name: 'namebot', aliases: ['sname'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '✏️ Nombre de sub bot.' }); } },
-    { name: 'ppbot', aliases: ['spp'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🖼️ Foto de sub bot.' }); } },
-    { name: 'biobot', aliases: ['sbio'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📝 Bio de sub bot.' }); } },
-    { name: 'blockbot', aliases: ['sblock'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🚫 Sub bot bloqueado.' }); } },
-    { name: 'unblockbot', aliases: ['sunblock'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '✅ Sub bot desbloqueado.' }); } },
-    { name: 'broadcastbot', aliases: ['sbc'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📢 Broadcast de sub bots.' }); } },
-    { name: 'clearsession', aliases: ['scache'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🧹 Caché de sub bot limpia.' }); } },
-    { name: 'sublist', aliases: ['slist'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📋 Listado general de sub bots.' }); } },
-    { name: 'subhelp', aliases: ['shelp'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📖 Ayuda de sub bots.' }); } },
-    { name: 'subpremium', aliases: ['spremium'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '⭐ Sub bot premium.' }); } },
-    { name: 'subfree', aliases: ['sfree'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🆓 Sub bot gratuito.' }); } },
-    { name: 'subexpire', aliases: ['sexpire'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '⏱️ Tiempo de sub bot.' }); } },
-    { name: 'subrenew', aliases: ['srenew'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔄 Sub bot renovado.' }); } },
-    { name: 'substats', aliases: ['sstats'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📊 Estadísticas de sub bot.' }); } },
-    { name: 'sublogs', aliases: ['slogs'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📜 Logs de sub bot.' }); } },
-    { name: 'subpingall', aliases: ['spingall'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🏓 Ping a todos los sub bots.' }); } },
-    { name: 'subrestartall', aliases: ['srestartall'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔄 Reiniciando todos los sub bots.' }); } },
-    { name: 'substopall', aliases: ['sstopall'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🛑 Deteniendo todos los sub bots.' }); } },
-    { name: 'subport', aliases: ['sport'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🌐 Puerto de sub bot.' }); } },
-    { name: 'subhost', aliases: ['shost'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💻 Host de sub bot.' }); } },
-    { name: 'submemory', aliases: ['smemory'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💾 Memoria de sub bot.' }); } },
-    { name: 'subcpu', aliases: ['scpu'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💻 Uso de CPU de sub bot.' }); } },
-    { name: 'subversion', aliases: ['sversion'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📌 Versión de sub bot.' }); } },
-    { name: 'subownerlist', aliases: ['sowners'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '👑 Lista de dueños de sub bots.' }); } },
-    { name: 'subadmin', aliases: ['sadmin'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '⭐ Admin de sub bot.' }); } },
-    { name: 'subban', aliases: ['sban'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🚫 Sub bot baneado.' }); } },
-    { name: 'subunban', aliases: ['sunban'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '✅ Sub bot desbaneado.' }); } },
-    { name: 'subconfig', aliases: ['sconfig'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '⚙️ Configuración de sub bot.' }); } },
-    { name: 'subbackup', aliases: ['sbackup'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💾 Respaldo de sub bot.' }); } },
-    { name: 'subrestore', aliases: ['srestore'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🔄 Restaurando sub bot.' }); } },
-    { name: 'subtest', aliases: ['stest'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🧪 Test de sub bot.' }); } },
-    { name: 'subcheck', aliases: ['scheck'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '✔️ Verificación de sub bot.' }); } },
-    { name: 'subactive', aliases: ['sactive'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🟢 Sub bots activos.' }); } }
-];
-                                                            
+const { default: makeWASocket, useMultiFileAuthState } = require('@whiskeysockets/baileys')
+const fs = require('fs')
+const path = require('path')
+
+let subBots = new Map()
+
+module.exports = {
+name: 'subbot',
+execute: async (sock, msg, args, BOT_NAME) => {
+const from = msg.key.remoteJid
+const sender = msg.key.participant || msg.key.remoteJid
+const cmd = args[0]
+
+// HACER SUBBOT
+if(cmd==='ser-subbot' || cmd==='subbot'){
+const sessionPath = `./subbots/${sender.split('@')[0]}`
+if(!fs.existsSync('./subbots')) fs.mkdirSync('./subbots')
+if(subBots.has(sender)) return sock.sendMessage(from,{text:`*${BOT_NAME}* Ya eres subbot`})
+
+await sock.sendMessage(from,{text:`*${BOT_NAME}* Enviame el codigo de 8 digitos que te aparecio`})
+
+subBots.set(sender, { esperandoCodigo: true, sessionPath })
+}
+
+// RECIBIR CODIGO
+else if(cmd==='codigo'){
+const codigo = args[1]
+if(!subBots.has(sender) ||!subBots.get(sender).esperandoCodigo)
+return sock.sendMessage(from,{text:`*${BOT_NAME}* Primero usa.ser-subbot`})
+
+const { sessionPath } = subBots.get(sender)
+subBots.get(sender).esperandoCodigo = false
+
+await sock.sendMessage(from,{text:`*${BOT_NAME}* Conectando subbot...`})
+
+const { state, saveCreds } = await useMultiFileAuthState(sessionPath)
+const subSock = makeWASocket({
+auth: state,
+printQRInTerminal: false,
+browser: ['EliezerStore-SubBot', 'Chrome', '1.0.0']
+})
+
+const code = await subSock.requestPairingCode(sender.split('@')[0])
+await sock.sendMessage(from,{text:`*${BOT_NAME}* Tu codigo: ${code}\nMetelo en WhatsApp > Dispositivos vinculados`})
+
+subSock.ev.on('creds.update', saveCreds)
+subSock.ev.on('connection.update', (u) => {
+if(u.connection === 'open'){
+subBots.set(sender, { sock: subSock, sessionPath })
+sock.sendMessage(from,{text:`*${BOT_NAME}* ✅ Subbot conectado correctamente`})
+}
+})
+}
+
+// DETENER SUBBOT
+else if(cmd==='stop-subbot'){
+if(!subBots.has(sender)) return sock.sendMessage(from,{text:`*${BOT_NAME}* No eres subbot`})
+const data = subBots.get(sender)
+if(data.sock) await data.sock.logout()
+subBots.delete(sender)
+await sock.sendMessage(from,{text:`*${BOT_NAME}* Subbot desconectado`})
+}
+
+// LISTA SUBBOTS
+else if(cmd==='lista-subbots'){
+let lista = [...subBots.keys()].map(u=>`@${u.split('@')[0]}`).join('\n') || 'Nadie'
+await sock.sendMessage(from,{text:`*${BOT_NAME} SUBBOTS ACTIVOS*\n\n${lista}`, mentions:[...subBots.keys()]})
+}
+
+else{
+await sock.sendMessage(from,{text:`*${BOT_NAME} - SUBBOT*\n\n.ser-subbot - Hacerte subbot\n.codigo 1234-5678 - Poner tu codigo\n.stop-subbot - Desconectarte\n.lista-subbots - Ver subbots`})
+}
+}}
