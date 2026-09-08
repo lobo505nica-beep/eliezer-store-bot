@@ -1,52 +1,127 @@
-module.exports = [
-    { name: 'balance', aliases: ['wallet', 'dinero'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💰 Consultando saldo...' }); } },
-    { name: 'work', aliases: ['trabajar'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💼 Has trabajado y ganado monedas.' }); } },
-    { name: 'crime', aliases: ['robar'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🦹 Crimen realizado.' }); } },
-    { name: 'slut', aliases: ['prostituir'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '✨ Ganancias obtenidas.' }); } },
-    { name: 'deposit', aliases: ['dep'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🏦 Dinero depositado en banco.' }); } },
-    { name: 'withdraw', aliases: ['wd', 'retirar'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💵 Dinero retirado del banco.' }); } },
-    { name: 'pay', aliases: ['transferir', 'dar'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💸 Transferencia realizada.' }); } },
-    { name: 'rob', aliases: ['atracar'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🥷 Intento de asalto.' }); } },
-    { name: 'daily', aliases: ['diario'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎁 Recompensa diaria de dinero.' }); } },
-    { name: 'weekly', aliases: ['semanal'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎁 Recompensa semanal.' }); } },
-    { name: 'monthly', aliases: ['mensual'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎁 Recompensa mensual.' }); } },
-    { name: 'shop', aliases: ['tienda'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🏪 Abriendo tienda económica.' }); } },
-    { name: 'buy', aliases: ['comprar'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🛒 Artículo comprado.' }); } },
-    { name: 'inventory', aliases: ['mochila'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎒 Inventario de objetos.' }); } },
-    { name: 'rich', aliases: ['topmoney', 'richest'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🏆 Top millonarios.' }); } },
-    { name: 'crime', aliases: ['delito'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🚓 Delito cometido.' }); } },
-    { name: 'slut', aliases: ['trabajito'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💼 Trabajo extra.' }); } },
-    { name: 'fish', aliases: ['pescar'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎣 Has pescado un pez valioso.' }); } },
-    { name: 'hunt', aliases: ['cazar'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🏹 Has cazado una presa.' }); } },
-    { name: 'mine', aliases: ['minar'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '⛏️ Mineral extraído de la mina.' }); } },
-    { name: 'slot', aliases: ['tragamonedas'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎰 Jugando a las tragamonedas.' }); } },
-    { name: 'roulette', aliases: ['ruleta'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎡 Ruleta económica.' }); } },
-    { name: 'coinflip', aliases: ['cf', 'moneda'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🪙 Cara o cruz.' }); } },
-    { name: 'blackjack', aliases: ['bjeco'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🃏 Partida de blackjack.' }); } },
-    { name: 'dicegame', aliases: ['dados'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎲 Apuesta con dados.' }); } },
-    { name: 'lottery', aliases: ['lotería'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎟️ Ticket de lotería comprado.' }); } },
-    { name: 'bank', aliases: ['banco'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🏦 Estado de cuenta bancaria.' }); } },
-    { name: 'loan', aliases: ['prestamo'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💸 Préstamo bancario solicitado.' }); } },
-    { name: 'payloan', aliases: ['pagarprestamo'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💵 Préstamo pagado.' }); } },
-    { name: 'invest', aliases: ['invertir'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📈 Inversión en bolsa.' }); } },
-    { name: 'stocks', aliases: ['bolsa'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📊 Acciones del mercado.' }); } },
-    { name: 'business', aliases: ['negocio'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🏢 Tu negocio genera ganancias.' }); } },
-    { name: 'store', aliases: ['mystore'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🏪 Eliezer Store eco panel.' }); } },
-    { name: 'sellitem', aliases: ['venderitem'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💰 Objeto vendido.' }); } },
-    { name: 'useitem', aliases: ['usaritem'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🛠️ Objeto utilizado.' }); } },
-    { name: 'giveitem', aliases: ['regalaritem'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🤝 Objeto transferido.' }); } },
-    { name: 'cratelist', aliases: ['cajas'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📦 Cajas misteriosas disponibles.' }); } },
-    { name: 'opencrate', aliases: ['abrircaja'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📦 Caja abierta.' }); } },
-    { name: 'pet', aliases: ['mascota'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🐾 Tu mascota virtual.' }); } },
-    { name: 'feedpet', aliases: ['alimentarpet'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🍖 Mascota alimentada.' }); } },
-    { name: 'petshop', aliases: ['tiendapet'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🏪 Tienda de mascotas.' }); } },
-    { name: 'robprotection', aliases: ['escudo'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🛡️ Escudo antirrobo activo.' }); } },
-    { name: 'tax', aliases: ['impuestos'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📊 Impuestos pagados.' }); } },
-    { name: 'bounty', aliases: ['recompensa'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎯 Recompensa por cabeza.' }); } },
-    { name: 'crimeboss', aliases: ['mafia'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '🎩 Panel de mafia.' }); } },
-    { name: 'economyreset', aliases: ['ecoreset'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '⚠️ Economía reiniciada.' }); } },
-    { name: 'economyhelp', aliases: ['ecohelp'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📖 Guía económica.' }); } },
-    { name: 'economystats', aliases: ['ecostats'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '📊 Estadísticas económicas.' }); } },
-    { name: 'transferall', aliases: ['daralles'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '💸 Todo transferido.' }); } },
-    { name: 'bonus', aliases: ['bonificacion'], execute: async (sock, m, args, r) => { await sock.sendMessage(r, { text: '✨ Bono económico aplicado.' }); } }
-];
+let economia = {}
+
+module.exports = {
+name: 'economia',
+execute: async (sock, msg, args, BOT_NAME) => {
+const from = msg.key.remoteJid
+const sender = msg.key.participant || msg.key.remoteJid
+const cmd = args[0]
+const userName = msg.pushName || 'Usuario'
+
+if(!economia[sender]) economia[sender] = {billetera: 100, banco: 0, ultimoTrabajo: 0, casado: null}
+
+// BALANCE
+if(cmd==='balance' || cmd==='bal'){
+await sock.sendMessage(from,{text:`*${BOT_NAME} BALANCE*\n\n💰 Billetera: $${economia[sender].billetera}\n🏦 Banco: $${economia[sender].banco}\n💵 Total: $${economia[sender].billetera + economia[sender].banco}`})
+}
+
+// TRABAJAR
+else if(cmd==='trabajar' || cmd==='work'){
+const ahora = Date.now()
+if(ahora - economia[sender].ultimoTrabajo < 60000) return sock.sendMessage(from,{text:`*${BOT_NAME}* Espera 1 min para volver a trabajar`})
+const ganancia = Math.floor(Math.random()*500)+100
+economia[sender].billetera += ganancia
+economia[sender].ultimoTrabajo = ahora
+const trabajos = ['Programador','Chef','Taxista','Doctor','Streamer']
+const trabajo = trabajos[Math.floor(Math.random()*trabajos.length)]
+await sock.sendMessage(from,{text:`*${BOT_NAME}* Trabajaste de ${trabajo}\nGanaste: $${ganancia}\nBilletera: $${economia[sender].billetera}`})
+}
+
+// DEPOSITAR
+else if(cmd==='depositar' || cmd==='dep'){
+const cantidad = parseInt(args[1])
+if(!cantidad || cantidad > economia[sender].billetera) return sock.sendMessage(from,{text:`*${BOT_NAME}* No tienes esa cantidad`})
+economia[sender].billetera -= cantidad
+economia[sender].banco += cantidad
+await sock.sendMessage(from,{text:`*${BOT_NAME}* Depositaste $${cantidad}\nBanco: $${economia[sender].banco}`})
+}
+
+// RETIRAR
+else if(cmd==='retirar' || cmd==='ret'){
+const cantidad = parseInt(args[1])
+if(!cantidad || cantidad > economia[sender].banco) return sock.sendMessage(from,{text:`*${BOT_NAME}* No tienes esa cantidad en el banco`})
+economia[sender].banco -= cantidad
+economia[sender].billetera += cantidad
+await sock.sendMessage(from,{text:`*${BOT_NAME}* Retiraste $${cantidad}\nBilletera: $${economia[sender].billetera}`})
+}
+
+// PAGAR
+else if(cmd==='pagar'){
+const user = msg.message.extendedTextMessage?.contextInfo?.mentionedJid?.[0]
+const cantidad = parseInt(args[2])
+if(!user ||!cantidad) return sock.sendMessage(from,{text:`Uso:.pagar @usuario 100`})
+if(economia[sender].billetera < cantidad) return sock.sendMessage(from,{text:`*${BOT_NAME}* No tienes suficiente`})
+if(!economia[user]) economia[user] = {billetera: 100, banco: 0, ultimoTrabajo: 0, casado: null}
+economia[sender].billetera -= cantidad
+economia[user].billetera += cantidad
+await sock.sendMessage(from,{text:`*${BOT_NAME}* Le pagaste $${cantidad} a @${user.split('@')[0]}`, mentions:[user]})
+}
+
+// ROBAR
+else if(cmd==='robar'){
+const user = msg.message.extendedTextMessage?.contextInfo?.mentionedJid?.[0]
+if(!user) return sock.sendMessage(from,{text:`Uso:.robar @usuario`})
+if(!economia[user]) return sock.sendMessage(from,{text:`*${BOT_NAME}* Ese usuario no tiene cuenta`})
+const ahora = Date.now()
+if(ahora - economia[sender].ultimoTrabajo < 300000) return sock.sendMessage(from,{text:`*${BOT_NAME}* Espera 5 min para robar de nuevo`})
+const exito = Math.random() > 0.5
+const cantidad = Math.floor(Math.random()*200)+50
+if(exito){
+economia[user].billetera -= cantidad
+economia[sender].billetera += cantidad
+await sock.sendMessage(from,{text:`*${BOT_NAME}* Robaste $${cantidad} a @${user.split('@')[0]} 😈`, mentions:[user]})
+}else{
+economia[sender].billetera -= 100
+await sock.sendMessage(from,{text:`*${BOT_NAME}* Te atraparon! Perdiste $100`})
+}
+economia[sender].ultimoTrabajo = ahora
+}
+
+// CASARSE
+else if(cmd==='casarse' || cmd==='marry'){
+const user = msg.message.extendedTextMessage?.contextInfo?.mentionedJid?.[0]
+if(!user) return sock.sendMessage(from,{text:`Uso:.casarse @usuario`})
+if(economia[sender].casado) return sock.sendMessage(from,{text:`*${BOT_NAME}* Ya estas casado`})
+economia[sender].casado = user
+if(!economia[user]) economia[user] = {billetera: 100, banco: 0, ultimoTrabajo: 0, casado: null}
+economia[user].casado = sender
+await sock.sendMessage(from,{text:`*${BOT_NAME}* 💍 @${sender.split('@')[0]} y @${user.split('@')[0]} ahora estan casados!`, mentions:[sender, user]})
+}
+
+// DIVORCIAR
+else if(cmd==='divorciar' || cmd==='divorce'){
+if(!economia[sender].casado) return sock.sendMessage(from,{text:`*${BOT_NAME}* No estas casado`})
+const ex = economia[sender].casado
+economia[sender].casado = null
+if(economia[ex]) economia[ex].casado = null
+await sock.sendMessage(from,{text:`*${BOT_NAME}* 💔 Se divorciaron`})
+}
+
+// SLOTS
+else if(cmd==='slots'){
+const apuesta = parseInt(args[1]) || 50
+if(economia[sender].billetera < apuesta) return sock.sendMessage(from,{text:`*${BOT_NAME}* No tienes suficiente`})
+const emojis = ['🍒','🍋','🔔','⭐','💎']
+const r1 = emojis[Math.floor(Math.random()*5)]
+const r2 = emojis[Math.floor(Math.random()*5)]
+const r3 = emojis[Math.floor(Math.random()*5)]
+let ganancia = 0
+if(r1===r2 && r2===r3) ganancia = apuesta*5
+else if(r1===r2 || r2===r3 || r1===r3) ganancia = apuesta*2
+economia[sender].billetera += ganancia - apuesta
+await sock.sendMessage(from,{text:`*${BOT_NAME} SLOTS*\n[${r1} ${r2} ${r3}]\n${ganancia>0?`Ganaste $${ganancia}`:`Perdiste $${apuesta}`}\nBilletera: $${economia[sender].billetera}`})
+}
+
+// TOP ECONOMIA
+else if(cmd==='top-econ'){
+let top = Object.entries(economia).sort((a,b)=>(b[1].billetera+b[1].banco)-(a[1].billetera+a[1].banco)).slice(0,5)
+let txt = `*${BOT_NAME} TOP RICOS*\n\n`
+top.forEach((v,i)=> txt += `${i+1}. @${v[0].split('@')[0]} - $${v[1].billetera+v[1].banco}\n`)
+await sock.sendMessage(from,{text:txt, mentions:top.map(v=>v[0])})
+}
+
+else{
+let lista=['balance','bal','trabajar','work','depositar','dep','retirar','ret','pagar','robar','casarse','marry','divorciar','slots','top-econ']
+await sock.sendMessage(from,{text:`*${BOT_NAME} - ECONOMIA*\n\n.${lista.join('\n.')}\n\nEjemplo:.trabajar.pagar @user 100`})
+}
+}}
